@@ -296,6 +296,11 @@
             <a href="galeria.html">GALERÍA</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+            <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
+                <a href="contacto.html" style="margin: 0 5px; font-weight: bold;">ES</a> |
+                <a href="contacto_en.html" style="margin: 0 5px;">EN</a> |
+                <a href="contacto_fr.html" style="margin: 0 5px;">FR</a>
+            </div>
         </div>
     </div>
     <div id="mobile-nav-dropdown">
@@ -469,6 +474,17 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="lang-switcher"
+                                    style="display: flex; gap: 10px; margin-left: 20px; align-items: center;">
+                                    <a href="contacto.html" class="lang-link active"
+                                        style="text-decoration: none; font-weight: bold; color: #074f00;">ES</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="contacto_en.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">EN</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="contacto_fr.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">FR</a>
+                                </div>
                             </nav>
                             <div class="nav_button w-nav-button">
                                 <div class="icon w-icon-nav-menu"></div>
@@ -512,7 +528,7 @@
                     <div class="container-large">
                         <div class="contact-component">
                             <div class="contact_form">
-                                <div class="form-block w-form">
+                                <div class="form-block">
                                     <form id="email-form" name="email-form" data-name="Email Form" class="form"
                                         onsubmit="return sendViaMailto(event)">
 
@@ -556,7 +572,7 @@
                                         </div>
                                     </form>
                                     <div class="success-message w-form-done">
-                                        <div class="text-size-regular" style="color: var(--brand-text);">¡Gracias por tu
+                                        <div class="text-size-regular" style="color: white;">¡Gracias por tu
                                             mensaje! Nos pondremos en contacto contigo pronto.</div>
                                     </div>
                                     <div class="error-message w-form-fail">
