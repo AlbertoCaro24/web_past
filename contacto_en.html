@@ -26,6 +26,7 @@
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/css/iyrp2026madrid.webflow.shared.e5e44c20d.css"
         rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+<<<<<<< HEAD
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script>
@@ -33,6 +34,8 @@
             emailjs.init('sVfV5bet3nTLJMkMA'); // <-- Replace with your EmailJS Public Key
         })();
     </script>
+=======
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
     <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
 
 
@@ -162,7 +165,11 @@
             min-height: 48px;
             font-family: inherit;
             transition: all 0.3s ease;
+<<<<<<< HEAD
             text-transform: none;
+=======
+            text-transform: lowercase !important;
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
             /* Requests "minúscula" */
         }
 
@@ -185,7 +192,11 @@
             font-weight: 400 !important;
             /* Regular weight for placeholder maybe? User said "bold y regular" for footer, not here. Keeping it simple or bold if preferred? Previous was bold. I'll keep bold. */
             font-weight: 700 !important;
+<<<<<<< HEAD
             text-transform: none;
+=======
+            text-transform: lowercase !important;
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
         }
 
         /* Webkit specific */
@@ -196,7 +207,11 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
+<<<<<<< HEAD
             text-transform: none;
+=======
+            text-transform: lowercase !important;
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
         }
 
         /* Mozilla specific */
@@ -207,7 +222,11 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
+<<<<<<< HEAD
             text-transform: none;
+=======
+            text-transform: lowercase !important;
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
         }
 
         /* MS specific */
@@ -218,7 +237,11 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
+<<<<<<< HEAD
             text-transform: none;
+=======
+            text-transform: lowercase !important;
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
         }
 
         /* Submit Button - DESIGN REQ: Green BG, Beige Text */
@@ -516,7 +539,11 @@
                             <div class="contact_form">
                                 <div class="form-block">
                                     <form id="email-form" name="email-form" data-name="Email Form" class="form"
+<<<<<<< HEAD
                                         onsubmit="return sendViaEmailJS(event)">
+=======
+                                        onsubmit="return sendViaMailto(event)">
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
 
                                         <div class="form-field_wrap">
                                             <div class="field-group">
@@ -558,7 +585,27 @@
                                         </div>
                                     </form>
                                     <div class="success-message w-form-done">
+<<<<<<< HEAD
                                         <div class="text-size-regular" style="color: white;">Thank you for
+=======
+<<<<<<< HEAD
+                                        <div class="text-size-regular" style="color: white;">Thank you for
+=======
+<<<<<<< HEAD
+                                        <div class="text-size-regular" style="color: white;">Thank you for
+=======
+<<<<<<< HEAD
+                                        <div class="text-size-regular" style="color: white;">Thank you for
+=======
+<<<<<<< HEAD
+                                        <div class="text-size-regular" style="color: white;">Thank you for
+=======
+                                        <div class="text-size-regular" style="color: var(--brand-text);">Thank you for
+>>>>>>> 3f965057e1bcb470ac8f189ad27bbba3591292c9
+>>>>>>> 7e88ce09c28285b4e205c4755801241c82335300
+>>>>>>> 1df1bf0035c1c658b410ea36fec11a1625013d61
+>>>>>>> c6bc81832c1ad62b3719a837dc45c8cfd84fbe9b
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
                                             your message! We will contact you soon.</div>
                                     </div>
                                     <div class="error-message w-form-fail">
@@ -661,6 +708,7 @@
         <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js"
             type="text/javascript"></script>
         <script>
+<<<<<<< HEAD
             var EMAILJS_SERVICE_ID  = 'service_nkmk9ig';   // <-- Replace with your Service ID
             var EMAILJS_TEMPLATE_ID = 'template_yknvkgo';  // <-- Replace with your Template ID
 
@@ -696,6 +744,42 @@
                         btn.textContent = originalText;
                         btn.disabled = false;
                     });
+=======
+            // Build a mailto link from the form values and open the user's mail client.
+            function sendViaMailto(e) {
+                e.preventDefault();
+                var form = document.getElementById('email-form');
+                if (!form) return true;
+                var nombre = form.Nombre ? form.Nombre.value.trim() : '';
+                var surname = form.Surname ? form.Surname.value.trim() : '';
+                var email = form.Email ? form.Email.value.trim() : '';
+                var phone = form.Phone ? form.Phone.value.trim() : '';
+                var message = form.Message ? form.Message.value.trim() : '';
+
+                var subject = 'Contact from IYRP 2026 site - ' + (nombre || '') + ' ' + (surname || '');
+                var body = '';
+                body += 'Name: ' + encodeURIComponent(nombre) + '%0D%0A';
+                body += 'Surname: ' + encodeURIComponent(surname) + '%0D%0A';
+                body += 'Email: ' + encodeURIComponent(email) + '%0D%0A';
+                body += 'Phone: ' + encodeURIComponent(phone) + '%0D%0A%0D%0A';
+                body += 'Message:%0D%0A' + encodeURIComponent(message) + '%0D%0A%0D%0A';
+
+                // Use encodeURIComponent for subject and body (subject needs manual encoding)
+                var mailto = 'mailto:iyrp2026madrid@madrid.org' +
+                    '?subject=' + encodeURIComponent(subject) +
+                    '&body=' + body;
+
+                // Open mail client
+                window.location.href = mailto;
+
+                // Optionally show the success message after a short delay
+                setTimeout(function () {
+                    var success = document.querySelector('.success-message');
+                    if (success) {
+                        success.style.display = 'block';
+                    }
+                }, 500);
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
 
                 return false;
             }
@@ -703,4 +787,8 @@
         <!-- Footer styles moved to style.css -->
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 6a89bc99bb101901b91b252fb059639ef0ba9b76
