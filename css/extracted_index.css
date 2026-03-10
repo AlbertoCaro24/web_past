@@ -229,28 +229,25 @@ body,
 
 /* Mobile responsive sizes REMOVED to allow fluid scaling */
 
-/* Hero Title Styling - BEIGE with Fluid Typography */
+/* Hero Title Styling - Small with Fluid Typography */
 .hero-component .heading-style-h1,
 .hero-component .heading-style-h1 .bold-text {
-    /* Fluid font size: Scales from 1.5rem (mobile) to 5.5rem (large desktop) */
-    font-size: clamp(1.5rem, 5.5vw, 5.5rem) !important;
-    /* Natural positioning without negative margins */
+    font-size: clamp(1.6rem, 4vw, 4rem) !important;
     margin-top: 0 !important;
     margin-bottom: 1rem !important;
-    /* Space before subtitle */
-    line-height: 1.1 !important;
+    line-height: 1.15 !important;
     color: #E8DDCC !important;
     -webkit-text-fill-color: #E8DDCC !important;
-    /* Enforce containment */
-    max-width: 90% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: 98% !important;
+    margin-left: 1% !important;
+    margin-right: 1% !important;
     word-wrap: break-word !important;
     background-clip: border-box !important;
     -webkit-background-clip: border-box !important;
     display: block;
     white-space: normal;
     letter-spacing: 0.02em;
+    text-align: center !important;
 }
 
 /* Reduce top padding of the hero container to pull content up naturally */

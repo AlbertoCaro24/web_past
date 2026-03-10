@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Tue Dec 02 2025 10:39:40 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3503"
@@ -6,15 +6,25 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO</title>
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO" name="description" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO" property="og:title" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO" property="og:description" />
+    <title>Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting -
+        CONTACTO</title>
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - CONTACTO"
+        name="description" />
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - CONTACTO"
+        property="og:title" />
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - CONTACTO"
+        property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="og:image" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO" property="twitter:title" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - CONTACTO"
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - CONTACTO"
+        property="twitter:title" />
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - CONTACTO"
         property="twitter:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
@@ -27,6 +37,20 @@
         href="https://cdn.prod.website-files.com/691f33f0a47cf304259c3453/css/iyrp2026madrid.webflow.shared.e5e44c20d.css"
         rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        // =====================================================
+        // EMAILJS CONFIGURATION — SUSTITUIR CON TUS DATOS
+        // 1. Regístrate gratis en https://www.emailjs.com/
+        // 2. Crea un Service y conecta tu cuenta de correo
+        // 3. Crea una Template con las variables: from_name, from_surname, from_email, phone, message
+        // 4. Sustituye los valores de abajo con los de tu panel de EmailJS
+        // =====================================================
+        (function () {
+            emailjs.init('sVfV5bet3nTLJMkMA'); // <-- Sustituir por tu Public Key de EmailJS
+        })();
+    </script>
     <!-- estilos para ocultar la insignia de Webflow (sobrescriben reglas del CSS exportado) -->
 
 
@@ -156,8 +180,7 @@
             min-height: 48px;
             font-family: inherit;
             transition: all 0.3s ease;
-            text-transform: lowercase !important;
-            /* Requests "minúscula" */
+            text-transform: none;
         }
 
         .contacto-page .w-input:focus,
@@ -176,10 +199,8 @@
             color: #8ab875 !important;
             /* Light Green */
             opacity: 1 !important;
-            font-weight: 400 !important;
-            /* Regular weight for placeholder maybe? User said "bold y regular" for footer, not here. Keeping it simple or bold if preferred? Previous was bold. I'll keep bold. */
             font-weight: 700 !important;
-            text-transform: lowercase !important;
+            text-transform: none;
         }
 
         /* Webkit specific */
@@ -190,7 +211,7 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: lowercase !important;
+            text-transform: none;
         }
 
         /* Mozilla specific */
@@ -201,7 +222,7 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: lowercase !important;
+            text-transform: none;
         }
 
         /* MS specific */
@@ -212,7 +233,7 @@
             color: #8ab875 !important;
             opacity: 1 !important;
             font-weight: 700 !important;
-            text-transform: lowercase !important;
+            text-transform: none;
         }
 
         /* Submit Button - DESIGN REQ: Green BG, Beige Text */
@@ -296,6 +317,11 @@
             <a href="galeria.html">GALERÍA</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+            <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
+                <a href="contacto.html" style="margin: 0 5px; font-weight: bold;">ES</a> |
+                <a href="contacto_en.html" style="margin: 0 5px;">EN</a> |
+                <a href="contacto_fr.html" style="margin: 0 5px;">FR</a>
+            </div>
         </div>
     </div>
     <div id="mobile-nav-dropdown">
@@ -469,6 +495,17 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="lang-switcher"
+                                    style="display: flex; gap: 10px; margin-left: 20px; align-items: center;">
+                                    <a href="contacto.html" class="lang-link active"
+                                        style="text-decoration: none; font-weight: bold; color: #074f00;">ES</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="contacto_en.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">EN</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="contacto_fr.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">FR</a>
+                                </div>
                             </nav>
                             <div class="nav_button w-nav-button">
                                 <div class="icon w-icon-nav-menu"></div>
@@ -487,8 +524,8 @@
                                     <h1 class="heading-style-h1 title-with-bg">
                                         <strong class="bold-text">
                                             CONTACTO
-                                            <br><span style="font-size: 0.5em;">MADRID INTERNATIONAL MEETING -
-                                                CELEBRATING THE IYRP 2026</span>
+                                            <br><span style="font-size: 0.5em;">CELEBRATING THE INTERNATIONAL YEAR OF
+                                                RANGELANDS AND PASTORALISTS 2026 MADRID INTERNATIONAL MEETING</span>
                                         </strong>
                                     </h1>
                                 </div>
@@ -512,9 +549,9 @@
                     <div class="container-large">
                         <div class="contact-component">
                             <div class="contact_form">
-                                <div class="form-block w-form">
+                                <div class="form-block">
                                     <form id="email-form" name="email-form" data-name="Email Form" class="form"
-                                        onsubmit="return sendViaMailto(event)">
+                                        onsubmit="return sendViaEmailJS(event)">
 
                                         <div class="form-field_wrap">
                                             <div class="field-group">
@@ -556,7 +593,7 @@
                                         </div>
                                     </form>
                                     <div class="success-message w-form-done">
-                                        <div class="text-size-regular" style="color: var(--brand-text);">¡Gracias por tu
+                                        <div class="text-size-regular" style="color: white;">¡Gracias por tu
                                             mensaje! Nos pondremos en contacto contigo pronto.</div>
                                     </div>
                                     <div class="error-message w-form-fail">
@@ -573,7 +610,8 @@
                 <div class="new-footer-container">
                     <!-- Left Column -->
                     <div class="new-footer-col-left">
-                        <h3>Te damos la bienvenida a Madrid International Meeting : <br>Celebrating The IYRP 2026</h3>
+                        <h3>Te damos la bienvenida a Celebrating the International Year of Rangelands and Pastoralists
+                            2026 Madrid International Meeting</h3>
 
                         <a href="contacto.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
@@ -659,40 +697,44 @@
         <script src="https://cdn.prod.website-files.com/gsap/3.13.0/ScrollTrigger.min.js"
             type="text/javascript"></script>
         <script>
-            // Build a mailto link from the form values and open the user's mail client.
-            function sendViaMailto(e) {
+            // =====================================================
+            // EMAILJS — SUSTITUIR CON TUS IDs
+            var EMAILJS_SERVICE_ID = 'service_nkmk9ig';   // <-- Ej: 'service_abc123'
+            var EMAILJS_TEMPLATE_ID = 'template_yknvkgo';  // <-- Ej: 'template_xyz789'
+            // =====================================================
+
+            function sendViaEmailJS(e) {
                 e.preventDefault();
                 var form = document.getElementById('email-form');
-                if (!form) return true;
-                var nombre = form.Nombre ? form.Nombre.value.trim() : '';
-                var surname = form.Surname ? form.Surname.value.trim() : '';
-                var email = form.Email ? form.Email.value.trim() : '';
-                var phone = form.Phone ? form.Phone.value.trim() : '';
-                var message = form.Message ? form.Message.value.trim() : '';
+                if (!form) return false;
 
-                var subject = 'Contacto desde sitio IYRP 2026 - ' + (nombre || '') + ' ' + (surname || '');
-                var body = '';
-                body += 'Nombre: ' + encodeURIComponent(nombre) + '%0D%0A';
-                body += 'Apellidos: ' + encodeURIComponent(surname) + '%0D%0A';
-                body += 'Email: ' + encodeURIComponent(email) + '%0D%0A';
-                body += 'Teléfono: ' + encodeURIComponent(phone) + '%0D%0A%0D%0A';
-                body += 'Mensaje:%0D%0A' + encodeURIComponent(message) + '%0D%0A%0D%0A';
+                var btn = document.getElementById('submit-button');
+                var originalText = btn.textContent;
+                btn.textContent = 'ENVIANDO...';
+                btn.disabled = true;
 
-                // Use encodeURIComponent for subject and body (subject needs manual encoding)
-                var mailto = 'mailto:iyrp2026madrid@madrid.org' +
-                    '?subject=' + encodeURIComponent(subject) +
-                    '&body=' + body;
+                var params = {
+                    from_name: form.Nombre ? form.Nombre.value.trim() : '',
+                    from_surname: form.Surname ? form.Surname.value.trim() : '',
+                    from_email: form.Email ? form.Email.value.trim() : '',
+                    phone: form.Phone ? form.Phone.value.trim() : '',
+                    message: form.Message ? form.Message.value.trim() : ''
+                };
 
-                // Open mail client
-                window.location.href = mailto;
-
-                // Optionally show the success message after a short delay
-                setTimeout(function () {
-                    var success = document.querySelector('.success-message');
-                    if (success) {
-                        success.style.display = 'block';
-                    }
-                }, 500);
+                emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params)
+                    .then(function () {
+                        var success = document.querySelector('.success-message');
+                        if (success) { success.style.display = 'block'; }
+                        form.reset();
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    }, function (error) {
+                        console.error('EmailJS error:', error);
+                        var fail = document.querySelector('.error-message');
+                        if (fail) { fail.style.display = 'block'; }
+                        btn.textContent = originalText;
+                        btn.disabled = false;
+                    });
 
                 return false;
             }

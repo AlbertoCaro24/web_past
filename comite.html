@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Tue Dec 02 2025 10:39:40 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3504"
@@ -6,14 +6,18 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR</title>
+    <title>Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - COMITÉ
+        ORGANIZADOR</title>
     <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." name="description" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR" property="og:title" />
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - COMITÉ ORGANIZADOR"
+        property="og:title" />
     <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="og:description" />
     <meta
         content="https://cdn.prod.website-files.com/685077c466f113761c6d796b/686d90e639c295cfb687c0a0_Open%20Graph.avif"
         property="og:image" />
-    <meta content="International Meeting-Madrid : Celebrating The IYRP 2026 - COMITÉ ORGANIZADOR"
+    <meta
+        content="Celebrating The International Year Of Rangelands And Pastoralists 2026 Madrid International Meeting - COMITÉ ORGANIZADOR"
         property="twitter:title" />
     <meta content="Comité Organizador del Congreso International Meeting Madrid 2026." property="twitter:description" />
     <meta
@@ -119,6 +123,59 @@
         .committee-card:hover .committee-logo-img {
             filter: brightness(1.05);
         }
+
+        /* ---- Colaboradores section ---- */
+        .colaboradores-section {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 2px dashed #c8dbb8;
+        }
+
+        .colaboradores-section h2 {
+            color: #5a7d4a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+        }
+
+        .colaboradores-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .colaborador-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: center;
+        }
+
+        .colaborador-logo {
+            max-height: 45px;
+            max-width: 130px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(10%);
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+
+        .colaborador-logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        .colaborador-name {
+            font-size: 0.75rem;
+            color: #888;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
     </style>
 </head>
 
@@ -146,6 +203,11 @@
             <a href="galeria.html">GALERÍA</a>
             <a href="contacto.html">CONTACTO</a>
             <a href="https://forms.gle/LBFsAjLBrUFWHAdQ7" target="_blank" class="mobile-btn-inscripcion">INSCRIPCIÓN</a>
+            <div class="mobile-lang-switcher" style="margin-top: 20px; text-align: center;">
+                <a href="comite.html" style="margin: 0 5px; font-weight: bold;">ES</a> |
+                <a href="comite_en.html" style="margin: 0 5px;">EN</a> |
+                <a href="comite_fr.html" style="margin: 0 5px;">FR</a>
+            </div>
         </div>
     </div>
     <div id="mobile-nav-dropdown">
@@ -312,6 +374,17 @@
                                         </div>
                                     </a>
                                 </div>
+                                <div class="lang-switcher"
+                                    style="display: flex; gap: 10px; margin-left: 20px; align-items: center;">
+                                    <a href="comite.html" class="lang-link active"
+                                        style="text-decoration: none; font-weight: bold; color: #074f00;">ES</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="comite_en.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">EN</a>
+                                    <span style="color: #074f00;">|</span>
+                                    <a href="comite_fr.html" class="lang-link"
+                                        style="text-decoration: none; color: #074f00;">FR</a>
+                                </div>
                             </nav>
                             <div class="nav_button w-nav-button">
                                 <div class="icon w-icon-nav-menu"></div>
@@ -330,8 +403,8 @@
                                     <h1 class="heading-style-h1 title-with-bg" style="text-align: center;">
                                         <strong class="bold-text">
                                             COMITÉ ORGANIZADOR
-                                            <br><span style="font-size: 0.5em;">MADRID INTERNATIONAL MEETING -
-                                                CELEBRATING THE IYRP 2026</span>
+                                            <br><span style="font-size: 0.5em;">CELEBRATING THE INTERNATIONAL YEAR OF
+                                                RANGELANDS AND PASTORALISTS 2026 MADRID INTERNATIONAL MEETING</span>
                                         </strong>
                                     </h1>
                                 </div>
@@ -355,10 +428,10 @@
                     <h2 style="color: #1a4d2e; margin-bottom: 2rem; text-align: center;">Comité Organizador Local</h2>
 
                     <div class="committee-grid">
-                        <!-- Francesca Passeti Bombardella -->
+                        <!-- Francesca Pasetti Bombardella -->
                         <div class="committee-card">
                             <h3 class="committee-name"
-                                style="text-align: center !important; width: 100%; display: block;">Francesca Passeti
+                                style="text-align: center !important; width: 100%; display: block;">Francesca Pasetti
                                 Bombardella</h3>
                             <p class="committee-affiliation"
                                 style="text-align: center !important; width: 100%; display: block;">Global Alliance for
@@ -439,6 +512,44 @@
                             </a>
                         </div>
                     </div>
+
+                    <!-- COLABORADORES -->
+                    <div class="colaboradores-section">
+                        <h2>Colaboradores</h2>
+                        <div class="colaboradores-grid">
+
+                            <!-- Fundación Entretantos -->
+                            <div class="colaborador-item">
+                                <a href="https://www.entretantos.org" target="_blank">
+                                    <img src="estilos/logos/Entretantos_nueva_grande.png" alt="Fundación Entretantos"
+                                        class="colaborador-logo">
+                                </a>
+                                <span class="colaborador-name">Fundación Entretantos</span>
+                            </div>
+
+                            <!-- Fundación Biodiversidad -->
+                            <div class="colaborador-item">
+                                <a href="https://www.fundacion-biodiversidad.es" target="_blank">
+                                    <img src="estilos/logos/VICE3+MITECO+FB_Banderas_color.png"
+                                        alt="Fundación Biodiversidad" class="colaborador-logo"
+                                        style="max-height: 55px;">
+                                </a>
+                                <span class="colaborador-name">Fundación Biodiversidad</span>
+                            </div>
+
+                            <!-- RFEAGAS -->
+                            <div class="colaborador-item">
+                                <a href="https://www.rfeagas.es" target="_blank"
+                                    style="display:inline-block; padding: 0.4rem 1.2rem; border: 1.5px solid #8ab875; border-radius: 6px; font-weight: 700; font-size: 1rem; color: #1a4d2e; text-decoration: none; letter-spacing: 1px;">
+                                    RFEAGAS
+                                </a>
+                                <span class="colaborador-name">Real Federación Española de Asociaciones de Ganado
+                                    Selecto</span>
+                            </div>
+
+                        </div>
+                    </div>
+
                 </div>
             </div>
 
@@ -449,7 +560,8 @@
                 <div class="new-footer-container">
                     <!-- Left Column -->
                     <div class="new-footer-col-left">
-                        <h3>Te damos la bienvenida a Madrid International Meeting : <br>Celebrating The IYRP 2026</h3>
+                        <h3>Te damos la bienvenida a Celebrating the International Year of Rangelands and Pastoralists
+                            2026 Madrid International Meeting</h3>
 
                         <a href="contacto.html" class="button w-inline-block"
                             style="background-color: #8ab875 !important; border: 1px solid #074f00 !important;">
