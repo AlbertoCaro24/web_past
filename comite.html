@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!-- This site was created in Webflow. https://webflow.com -->
 <!-- Last Published: Tue Dec 02 2025 10:39:40 GMT+0000 (Coordinated Universal Time) -->
 <html data-wf-domain="iyrp2026madrid.webflow.io" data-wf-page="691f33f1a47cf304259c3504"
@@ -156,9 +156,17 @@
             text-align: center;
         }
 
+        /* Fixed-height logo container: keeps text labels aligned */
+        .colaborador-item a {
+            height: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         .colaborador-logo {
-            max-height: 45px;
-            max-width: 130px;
+            max-height: 55px;
+            max-width: 150px;
             width: auto;
             object-fit: contain;
             filter: grayscale(10%);
@@ -175,6 +183,7 @@
             color: #888;
             font-weight: 600;
             letter-spacing: 0.5px;
+            text-align: center;
         }
     </style>
 </head>
@@ -539,12 +548,31 @@
 
                             <!-- RFEAGAS -->
                             <div class="colaborador-item">
-                                <a href="https://www.rfeagas.es" target="_blank"
-                                    style="display:inline-block; padding: 0.4rem 1.2rem; border: 1.5px solid #8ab875; border-radius: 6px; font-weight: 700; font-size: 1rem; color: #1a4d2e; text-decoration: none; letter-spacing: 1px;">
-                                    RFEAGAS
+                                <a href="https://www.rfeagas.es" target="_blank">
+                                    <img src="estilos/logos/LOGO_RFEAGAS_.png" alt="RFEAGAS" class="colaborador-logo"
+                                        style="max-height: 55px;">
                                 </a>
                                 <span class="colaborador-name">Real Federación Española de Asociaciones de Ganado
                                     Selecto</span>
+                            </div>
+
+                            <!-- INTEROVIC -->
+                            <div class="colaborador-item">
+                                <a href="https://www.interovic.es" target="_blank">
+                                    <img src="estilos/logos/INTEROVIC-LOGO_03.png" alt="INTEROVIC"
+                                        class="colaborador-logo" style="max-height: 55px;">
+                                </a>
+                                <span class="colaborador-name">INTEROVIC</span>
+                            </div>
+
+                            <!-- International Land Coalition -->
+                            <div class="colaborador-item">
+                                <a href="https://www.landcoalition.org" target="_blank">
+                                    <img src="estilos/logos/ilc logo standard black [Convertido].png"
+                                        alt="International Land Coalition" class="colaborador-logo"
+                                        style="max-height: 55px;">
+                                </a>
+                                <span class="colaborador-name">International Land Coalition</span>
                             </div>
 
                         </div>
