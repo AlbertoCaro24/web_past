@@ -10880,3 +10880,42 @@ Let's try a min-height and flex centering. */
   gap: 0.5rem;
   font-size: 0.9rem;
 }
+
+/* =========================================
+   INDEX PAGE - HERO TITLE SIZE OVERRIDE
+   ========================================= */
+html body.index-page .hero-component .heading-style-h1,
+html body.index-page .hero-component .heading-style-h1 .bold-text {
+  font-size: clamp(1.2rem, 2.5vw, 2.2rem) !important;
+  white-space: nowrap !important;
+  line-height: 1.3 !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* =========================================
+   ALL PAGES - HERO SUBTITLE SPAN CENTERING FIX
+   Makes the meeting-title span a block so text-align:center
+   works correctly even with white-space:nowrap
+   ========================================= */
+.hero-component .heading-style-h1 .bold-text span,
+.hero-component .heading-style-h1 span {
+  display: block !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Also fix the h1 and bold-text width for all pages */
+.hero-component .heading-style-h1,
+.hero-component .heading-style-h1 .bold-text {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
