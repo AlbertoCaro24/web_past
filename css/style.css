@@ -4310,7 +4310,8 @@ figcaption {
   /* background-color: rgba(232, 221, 204, 0.6); REMOVED */
   /* padding: 1rem 1.25rem; REMOVED */
   /* border-radius: 10px; REMOVED */
-  display: inline-block;
+  display: block;
+  width: 100%;
   position: relative;
   z-index: 70;
   margin-left: auto;
@@ -4318,6 +4319,35 @@ figcaption {
   text-align: center;
   /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08); REMOVED */
   /* backdrop-filter removed to match exact requested style */
+}
+
+/* Subtitle spacing fix for hero section */
+.title-with-bg .bold-text span[style*="font-size: 0.5em"] {
+  display: block !important;
+  width: 100% !important;
+  margin: 0.8rem 0 0 0 !important;
+  padding: 0 0.5rem !important;
+  line-height: 1.2 !important;
+  word-spacing: normal !important;
+  letter-spacing: normal !important;
+  white-space: normal !important;
+  text-align: center !important;
+  font-size: 0.5em !important;
+}
+
+/* Force BR elements to create line breaks */
+.title-with-bg .bold-text span br {
+  content: "";
+  display: block !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure each line of subtitle is on its own row */
+.hero-component .heading-style-h1.title-with-bg .bold-text {
+  display: block !important;
+  width: 100% !important;
 }
 
 /* Force black color for the hero title and subtitle text (including strong/b/a) */
@@ -6650,22 +6680,25 @@ body,
 /* Hero Title Styling - BEIGE with Fluid Typography */
 .hero-component .heading-style-h1,
 .hero-component .heading-style-h1 .bold-text {
-  font-size: clamp(1.6rem, 4vw, 4rem) !important;
+  /* Fluid font size: Scales from 1.5rem (mobile) to 5.5rem (large desktop) */
+  font-size: clamp(1.5rem, 5.5vw, 5.5rem) !important;
+  /* Natural positioning without negative margins */
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
-  line-height: 1.15 !important;
+  /* Space before subtitle */
+  line-height: 1.1 !important;
   color: #074f00 !important;
   -webkit-text-fill-color: #074f00 !important;
-  max-width: 98% !important;
-  margin-left: 1% !important;
-  margin-right: 1% !important;
+  /* Enforce containment */
+  max-width: 90% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   word-wrap: break-word !important;
   background-clip: border-box !important;
   -webkit-background-clip: border-box !important;
   display: block;
   white-space: normal;
   letter-spacing: 0.02em;
-  text-align: center !important;
 }
 
 /* Reduce top padding of the hero container to pull content up naturally */
@@ -7677,7 +7710,8 @@ body,
 /* Hero Title Styling - BEIGE with Fluid Typography */
 .hero-component .heading-style-h1,
 .hero-component .heading-style-h1 .bold-text {
-  font-size: clamp(1.6rem, 4vw, 4rem) !important;
+  /* Fluid font size: Scales from 1.5rem (mobile) to 5.5rem (large desktop) */
+  font-size: clamp(1.5rem, 5.5vw, 5.5rem) !important;
   /* Natural positioning without negative margins */
   margin-top: 0 !important;
   margin-bottom: 1rem !important;
@@ -10527,395 +10561,67 @@ body.que-es-page {
   border: none !important;
   border-left: none !important;
 }
-
-/* --- AGENT FIX 2026-02-16: HERO OVERLAP FIX (CONTACTO & OTHERS) --- */
-/* The menu is fixed/sticky, so we need to push the hero content down */
-body:not(.index-page) .section_hero .hero_content {
-  padding-top: 1rem !important;
-  /* Reduced to 1rem to raise text further as requested */
-}
-
-/* Override for CONTACTO page (keep text lower as per user request) */
-body.contacto-page .section_hero .hero_content {
-  padding-top: 6rem !important;
-}
-
-
-
-/* --- AGENT FIX 2026-02-16: NAVIGATION & RESPONSIVE --- */
-
-/* 1. Active State */
-.nav_link.active-link,
-.nav_link.active-link .text-size-regular {
-  font-family: 'Roboto', sans-serif !important;
-  /* Switch to Roboto for bold weight support */
-  font-weight: 700 !important;
-  color: #074f00 !important;
-  /* Dark Green */
-  text-decoration: none !important;
-  text-shadow: 0.5px 0 0 #074f00;
-  /* Faux bold backup */
-}
-
-/* 2. Menu Layout Fixes (Desktop) */
-/* Ensure the nav wrap doesn't overflow or break on large screens */
-.nav-menu_wrap {
-  display: flex;
-  justify-content: flex-end;
-  /* Align items to the right */
-  align-items: center;
-  flex-wrap: nowrap;
-  /* Prevent wrapping to keep layout stable */
-  gap: 0px;
-  /* REMOVED GAP completely to save space */
-  max-width: 100%;
-}
-
-/* Ensure links align correctly */
+/* ---- RESPONSIVE NAV MENU FIX ---- */
+/* Prevent vertical overlapping of absolute text on hover */
 .nav_link {
-  display: inline-flex !important;
-  align-items: center;
-  white-space: nowrap;
-  /* Prevent text wrapping inside links */
-  height: auto !important;
-  padding: 4px 6px !important;
-  /* MINIMAL PADDING */
+    white-space: nowrap !important;
+}
+.nav-button_text {
+    white-space: nowrap !important;
+}
+/* Reduce padding on medium screens to fit all menu items before mobile breakpoint */
+@media screen and (max-width: 1250px) {
+    .nav-left {
+        gap: 0.5rem !important;
+    }
+    .nav_link {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    .text-size-regular {
+        font-size: 0.85rem !important;
+    }
+    .button.is-nav {
+        margin-left: 0.5rem !important;
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
 }
 
-/* 3. Custom Mobile Menu Visibility */
-@media screen and (min-width: 992px) {
-  #custom-mobile-menu {
-    display: none !important;
-  }
+/* ---- HERO TITLE RESIZE ---- */
+#home-hero-title,
+#home-hero-title strong,
+#home-hero-title .bold-text {
+    font-size: clamp(1.6rem, 3vw, 2.5rem) !important;
+    line-height: 1.3 !important;
+    word-break: normal !important;
+    white-space: normal !important;
 }
 
-@media screen and (max-width: 991px) {
+#home-hero-title {
+    text-align: center !important;
+    padding: 0 15px !important;
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
 
-  /* Show Custom Mobile Menu */
-  #custom-mobile-menu {
-    display: block !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background: white;
-    border-bottom: 1px solid #ddd;
-  }
-
-  #mobile-nav-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    height: 70px;
-  }
-
-  #mobile-nav-logo img {
-    height: 50px;
-    width: auto;
-  }
-
-  #mobile-nav-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  #mobile-nav-toggle span {
+#home-hero-title .hero-motto {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #074f00;
-  }
-
-  #mobile-nav-dropdown {
-    display: none;
-    /* Toggled by JS */
-    flex-direction: column;
-    background: white;
-    border-top: 1px solid #eee;
-    padding: 20px;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-
-  #mobile-nav-dropdown a {
-    padding: 15px 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #074f00;
-    text-decoration: none;
-    font-weight: bold;
-    font-family: 'Anaheim', sans-serif;
-    font-size: 1.1rem;
-    display: block;
-  }
-
-  /* Hide Standard Desktop Menu */
-  .nav_component,
-  .w-nav {
-    display: none !important;
-  }
+    font-size: 0.55em !important;
+    font-weight: 500 !important;
+    opacity: 0.9;
+    letter-spacing: 1px;
+    margin-top: 5px;
 }
 
-/* 4. Responsive Breakpoints - Tweak Desktop Spacing */
-@media screen and (max-width: 1200px) {
-  .nav-menu_wrap {
-    gap: 0.5rem;
-  }
-
-  .nav_link {
-    padding: 8px 10px !important;
-  }
-}
-
-/* =========================================
-   EXTRACTED FROM galeria.html (Gallery Slider)
-   ========================================= */
-
-/* Gallery Slider Styles */
-.gallery-slider-wrapper {
-  position: relative;
-  max-width: 900px;
-  margin: 0 auto;
-  background: #ffffff;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-}
-
-/* Aspect ratio for the slide container - optional, or let image define height */
-/* Putting a fixed aspect ratio might crop images or leave black bars. 
-Let's try a min-height and flex centering. */
-.gallery-slides {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  /* Fixed height for uniformity */
-  /* Adjust based on image aspect ratio usually 16:9 or 4:3 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-}
-
-.gallery-slide {
-  display: none;
-  width: 100%;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  animation: fadeEffect 0.5s;
-}
-
-.gallery-slide.active {
-  display: flex;
-}
-
-.gallery-slide img {
-  width: 100%;
-  height: 100%;
-  /* Fill container height */
-  object-fit: cover;
-  /* Cover area, cropping if needed to avoid whitespace */
-  display: block;
-}
-
-/* Navigation Buttons */
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #71779b;
-  border: none;
-  font-size: 2rem;
-  padding: 1rem;
-  cursor: pointer;
-  z-index: 20;
-  transition: background-color 0.3s;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 10px;
-}
-
-.slider-btn:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.prev-btn {
-  left: 0;
-}
-
-.next-btn {
-  right: 0;
-}
-
-/* Collapsible Footer */
-.gallery-footer-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 30;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-toggle {
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(5px);
-  color: #71779b;
-  padding: 8px 20px;
-  border-radius: 20px 20px 0 0;
-  /* Rounded top */
-  cursor: pointer;
-  display: flex;
-  gap: 8px;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  transition: background-color 0.3s;
-  width: auto;
-  min-width: 180px;
-  justify-content: center;
-}
-
-.footer-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.footer-content {
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: #ffffff;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
-  text-align: center;
-  padding: 0 2rem;
-  /* Side padding */
-  box-sizing: border-box;
-}
-
-.gallery-footer-overlay.expanded .footer-content {
-  max-height: 300px;
-  /* Allow enough space for text */
-  padding: 1.5rem 2rem;
-}
-
-.gallery-footer-overlay.expanded .toggle-icon {
-  transform: rotate(180deg);
-}
-
-.toggle-icon {
-  transition: transform 0.3s;
-  display: inline-block;
-}
-
-#captionText {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0.6;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .gallery-slides {
-    min-height: 300px;
-  }
-
-  .slider-btn {
-    padding: 0.5rem;
-    font-size: 1.5rem;
-    width: 40px;
-    height: 40px;
-  }
-
-  .footer-content {
-    font-size: 0.9rem;
-  }
-}
-
-/* =========================================
-   EXTRACTED FROM galeria.html (Patch)
-   ========================================= */
-.gallery-header-padding {
-  padding-bottom: 1rem !important;
-}
-
-.gallery-section-padding {
-  padding-top: 1rem !important;
-  padding-bottom: 2rem !important;
-}
-
-.footer-row-copyright {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.footer-text-copyright {
-  display: flex;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-}
-
-/* =========================================
-   INDEX PAGE - HERO TITLE SIZE OVERRIDE
-   ========================================= */
-html body.index-page .hero-component .heading-style-h1,
-html body.index-page .hero-component .heading-style-h1 .bold-text {
-  font-size: clamp(1.2rem, 2.5vw, 2.2rem) !important;
-  white-space: nowrap !important;
-  line-height: 1.3 !important;
-  text-align: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* =========================================
-   ALL PAGES - HERO SUBTITLE SPAN CENTERING FIX
-   Makes the meeting-title span a block so text-align:center
-   works correctly even with white-space:nowrap
-   ========================================= */
-.hero-component .heading-style-h1 .bold-text span,
-.hero-component .heading-style-h1 span {
-  display: block !important;
-  text-align: center !important;
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Also fix the h1 and bold-text width for all pages */
-.hero-component .heading-style-h1,
-.hero-component .heading-style-h1 .bold-text {
-  width: 100% !important;
-  max-width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
+@media screen and (max-width: 768px) {
+    #home-hero-title,
+    #home-hero-title strong,
+    #home-hero-title .bold-text {
+        font-size: clamp(1.2rem, 5vw, 1.5rem) !important;
+    }
+    #home-hero-title {
+        padding: 0 10px !important;
+    }
 }
