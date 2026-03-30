@@ -623,31 +623,65 @@
                     </div>
                 </div>
 
-                <!-- Logos Bottom -->
-                <div class="new-footer-logos">
-                    <a href="https://iyrp.info" target="_blank" class="footer-logo-link">
-                        <img src="estilos/logos/logo_iyrp.png" loading="lazy" alt="iyrp"
-                            style="height: 60px; width: auto;" />
-                    </a>
-                    <a href="https://www.fao.org" target="_blank" class="footer-logo-link">
-                        <img src="estilos/logos/fao_logo_blue_3lines_es.png" loading="lazy" alt="FAO"
-                            style="height: 60px; width: auto;" />
-                    </a>
-                    <a href="https://www.iamz.ciheam.org" target="_blank" class="footer-logo-link">
-                        <img src="estilos/logos/ciheam_zaragoza_cmjn_horizontal.png" loading="lazy"
-                            alt="CIHEAM Zaragoza" style="height: 60px; width: auto;" />
-                    </a>
-                    <a href="https://trashumanciaynaturaleza.org" target="_blank" class="footer-logo-link">
-                        <img src="estilos/logos/fundacionlogo.png" loading="lazy" alt="Fundación Trashumancia"
-                            style="height: 60px; width: auto;" />
-                    </a>
+                                                <!-- Logos Bottom -->
+                <div class="new-footer-logos" style="display: block; width: 100%; max-width: 1200px; margin: 0 auto; padding: 2rem 1rem; box-sizing: border-box;">
+                    
+                    <style>
+                        .footer-logos-container { width: 100%; }
+                        .footer-logos-title { font-size: 15px; font-weight: 500; color: inherit; margin-bottom: 10px; line-height: 1.4; font-family: sans-serif; }
+                        .footer-strip { background-color: #ffffff; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; box-sizing: border-box; border-radius: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); flex-wrap: wrap; gap: 15px; }
+                        .footer-strip a { flex: 0 0 auto; display: flex; justify-content: center; align-items: center; }
+                        .footer-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 2rem; }
+                        .footer-logo-row { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; }
+                        .footer-logo-row img { max-height: 45px; width: auto; object-fit: contain; }
+                        .strip-logo { max-height: 55px; width: auto; object-fit: contain; }
+                        
+                        @media (max-width: 900px) {
+                            .footer-columns { grid-template-columns: 1fr; gap: 2rem; }
+                            .footer-strip { justify-content: center; }
+                        }
+                        @media (max-width: 600px) {
+                            .strip-logo { max-height: 45px; }
+                            .footer-logo-row img { max-height: 35px; }
+                        }
+                    </style>
 
-                    <a href="https://www.comunidad.madrid" target="_blank" class="footer-logo-link">
-                        <img src="estilos/logos/comunidad_de_madrid.png" loading="lazy" alt="Comunidad de Madrid"
-                            style="height: 60px; width: auto;" />
-                    </a>
+                    <!-- Top section: Comité Organizador -->
+                    <div class="footer-logos-container" style="margin-bottom: 2.5rem;">
+                        <div class="footer-logos-title">Comité Organizador</div>
+                        <div class="footer-strip">
+                            <a href="https://iyrp.info" target="_blank"><img src="estilos/logos/logo_iyrp.png" alt="iyrp" class="strip-logo"></a>
+                            <a href="https://www.fao.org" target="_blank"><img src="estilos/logos/fao_logo_blue_3lines_es.png" alt="FAO" class="strip-logo"></a>
+                            <a href="https://www.iamz.ciheam.org" target="_blank"><img src="estilos/logos/ciheam_zaragoza_cmjn_horizontal.png" alt="CIHEAM Zaragoza" class="strip-logo" style="max-height: 45px;"></a>
+                            <a href="https://trashumanciaynaturaleza.org" target="_blank"><img src="estilos/logos/fundacionlogo.png" alt="Fundación Trashumancia" class="strip-logo"></a>
+                            <a href="https://www.comunidad.madrid" target="_blank"><img src="estilos/logos/comunidad_de_madrid.png" alt="Comunidad de Madrid" class="strip-logo" style="max-height: 40px;"></a>
+                        </div>
+                    </div>
+
+                    <!-- Bottom section: 2 columns -->
+                    <div class="footer-columns">
+                        <!-- Column 1: Patrocinado por -->
+                        <div>
+                            <div class="footer-logos-title">Patrocinado por</div>
+                            <div class="footer-logo-row">
+                                <a href="https://www.entretantos.org" target="_blank" style="display: block;"><img src="estilos/logos/entretantos_nueva_grande.png" alt="Entretantos"></a>
+                                <a href="https://www.fundacion-biodiversidad.es" target="_blank" style="display: block;"><img src="estilos/logos/vice3mitecofb_banderas_color.png" alt="Ministerio"></a>
+                                <img src="estilos/logos/REDELECTRICA_POS_RGB.png" alt="Red Eléctrica">
+                                <a href="https://www.landcoalition.org" target="_blank" style="display: block;"><img src="estilos/logos/ilc_logo_standard_black_convertido.png" alt="ILC"></a>
+                            </div>
+                        </div>
+                        
+                        <!-- Column 2: Colabora -->
+                        <div>
+                            <div class="footer-logos-title">Colabora</div>
+                            <div class="footer-logo-row">
+                                <a href="https://www.interovic.es" target="_blank" style="display: block;"><img src="estilos/logos/interovic_logo_03.png" alt="Interovic"></a>
+                                <a href="https://www.rfeagas.es" target="_blank" style="display: block;"><img src="estilos/logos/logo_rfeagas_.png" alt="RFEAGAS"></a>
+                                <img src="estilos/logos/Ayto%20Aranjuez%20firma_web.png" alt="Aranjuez">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
                 <div class="footer-legal-bottom"
                     style="display: flex; flex-direction: row; flex-wrap: wrap; align-items: center; justify-content: space-between; margin-top: 2rem; padding-bottom: 2rem; gap: 1rem; width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 2rem; padding-right: 2rem;">
 
